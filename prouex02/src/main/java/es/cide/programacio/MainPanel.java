@@ -1,6 +1,8 @@
 package es.cide.programacio;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.BorderFactory;
@@ -10,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class MainPanel extends JPanel {
+public class MainPanel extends JPanel implements ActionListener {
     private File fitxerActual; // Nuestro bloque de TextArea debe de ser un objeto de tipo File, para que toda
                                // la logica funcione
     private JTextArea texto;
@@ -45,10 +47,21 @@ public class MainPanel extends JPanel {
 
         add(scroll, BorderLayout.CENTER);
 
+        // NUEVO
+        nou.addActionListener(e -> nou());
+
+        // ABRIR
+        obrir.addActionListener(e -> obrir());
+
+        // DESAR
+        desar.addActionListener(e -> desar());
+
+        // DESAR COM
+        desarCom.addActionListener(e -> desarCom());
+
     }
 
-
-    // Metodos de los Botones 
+    // Metodos de los Botones
     private void obrir() {
 
     }
@@ -63,6 +76,12 @@ public class MainPanel extends JPanel {
 
     private void nou() {
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
     }
 
     public static void main(String[] args) {
