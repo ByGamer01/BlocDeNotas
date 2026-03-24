@@ -2,6 +2,7 @@ package es.cide.programacio;
 
 import java.awt.BorderLayout;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -28,7 +29,9 @@ public class MainPanel extends JPanel {
 
         // Panel central (zona de texto)
         JPanel seccionTexto = new JPanel();
+        seccionTexto.setBorder(BorderFactory.createTitledBorder("Editor"));
         add(seccionTexto, BorderLayout.CENTER);
+
     }
 
     public static void main(String[] args) {
